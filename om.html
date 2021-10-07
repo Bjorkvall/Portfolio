@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Björkvall</title>
+</head>
+
+<body>
+
+    <!--Nav-->
+    <header class="aboutpage">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+                <a class="navbar-brand" href="index.html">Björkvall</a>
+
+                <button class="navbar-toggler navbar-toggler-dark" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link" href="index.html">Portfolio</a>
+                        <a class="nav-link active" href="om.html">About me<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="kontakt.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container py-5 text-center">
+                <h1>About me</h1>
+                <p>Who am I?</p>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="about container-fluid">
+            <div class="container infoText">
+                <div class="row justify-content-center">
+                    <img src="img/alice.png" class="profileImg img-fluid col-sm-10 col-md-6 col-lg-4" alt="profile image">
+                </div>
+                    
+
+                        <div class="row text-center justify-content-center">
+                            <div class="col-sm-10 col-md-10 py-5">
+                        <h3>Hello!</h3>
+                        <p class="text-dark py-4">My name is Alice Björkvall and I´m an aspiring UX Desiger currently
+                            studying at Nackademin. I love to be creative and create user-friendly solutions. Lorem
+                            ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget pulvinar felis, et faucibus
+                            arcu. Nullam pellentesque efficitur commodo. Interdum et malesuada fames ac ante ipsum
+                            primis in faucibus. Phasellus sollicitudin cursus turpis at tempus. </p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="py-4">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+
+                <div class="cardClock text-center">
+                    <div class="card-body">
+                        <div class="clockContainer">
+                            <p id="date"></p>
+                            <p id="time"></p>
+                            <span id="hours" class="clockpart"></span>
+                            <span id="colon1" class="clockmin"></span>
+                            <span id="minutes" class="clockpart"></span>
+                            <span id="colon2" class="clockmin"> </span>
+                            <span id="seconds" class="clockpart"></span>
+                            <span id="ampm" class="clockpart"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="text-center text-white py-4"> &copy; Copyright 2021 <a class="text-white ml-2"
+                    href="https://www.alicebjorkvall.com" target="_blank">Alice Björkvall</a></div>
+        </div>
+    </footer>
+
+    <!-- Klocka JavaScript-->
+    <script>
+        var myVar = setInterval(myTimer, 1000);
+        var hours = ["12",
+            "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12",
+            "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+        var months = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+        ];
+        function myTimer() {
+            var date = new Date();
+            document.getElementById("date").innerHTML =
+                date.getDate() +
+                "-" +
+                months[date.getMonth()] +
+                "-" +
+                date.getFullYear();
+            document.getElementById("hours").innerHTML = hours[date.getHours()];
+            document.getElementById("minutes").innerHTML = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+            document.getElementById("seconds").innerHTML = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+            document.getElementById("ampm").innerHTML = date.getHours() < 12 ? "AM" : "PM";
+
+            if (document.getElementById("colon1").innerHTML.includes(":")) {
+
+                document.getElementById("colon2").innerHTML = "";
+                document.getElementById("colon1").innerHTML = "";
+            }
+            else {
+
+                document.getElementById("colon2").innerHTML = ":";
+                document.getElementById("colon1").innerHTML = ":";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

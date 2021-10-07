@@ -1,0 +1,183 @@
+body {
+    background-color: black;
+    font-family:century gothic;
+    overflow-x: hidden
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size:30px;
+}
+
+header {
+background-color: black;
+}
+
+#myWork {
+    background-image: url(../img/Untitled.png);
+    background-size: 100% 100%;
+}
+
+.contact {
+    background-image: url(../img/Untitled.png);
+    background-size: 100% 100%;  
+}
+
+.about {
+    background-image: url(../img/Untitled.png);
+    background-size: 100% 100%;
+}
+
+.infoText {
+    
+    padding-bottom: 100px;  
+}
+
+.formContainer {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.container-fluid {
+    padding:0;
+}
+
+.profileImg {
+    padding-top: 50px;
+}
+
+span {
+    font-weight: bold;
+}
+
+p, h1 {
+    color: white;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #fff
+}
+
+@media (max-width:767px) {
+    h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.workTitle {
+    padding-top: 150px;
+    padding-bottom:30px;
+}
+
+.work {
+    padding-bottom: 150px;
+    cursor: pointer
+}
+
+.item {
+    margin-bottom: 30px
+}
+
+.item .box {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+    overflow: hidden
+}
+
+.item .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7, 7, 7, 0.637);
+    transition: opacity 0.15s ease-in;
+    opacity: 0;
+    padding-top: 80px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+}
+
+.item:hover .cover {
+    opacity: 1
+}
+
+.item .name {
+    font-weight: bold;
+    margin-bottom: 8px
+}
+
+.item .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #bbd8fb;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 20px
+}
+
+.card {
+    background-color:black;
+    border: none;
+}
+
+.carousel-inner {
+    background-color: black;
+     border-radius: 16px; 
+ }
+ 
+ .carousel {
+     background-color: black;
+ }
+ 
+ .card-body {
+     text-align: center;
+ }
+
+ .rewiew {
+     padding-left: 50px;
+     padding-right: 50px;
+ }
+
+ footer {
+     background-color: black;
+     border-color: black;
+     border-top: 10px;
+ }
+
+/*Klocka*/
+
+.clockpart
+{
+padding:0px !important;
+min-width:60px !important;
+display: inline-block;
+}
+.clockmin
+{
+padding:0px !important;
+width:5px !important;
+min-width:5px !important;
+display: inline-block;
+}
+
+#date {
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.cardClock {
+    background-color: white;
+    border-radius: 16px;
+}
+
+
